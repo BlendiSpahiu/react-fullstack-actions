@@ -9,7 +9,7 @@ import { UserModel } from '../interfaces/models/index';
 export const generateJWT = (user: UserModel) => {
   const payload = {
     'https://hasura.io/jwt/claims': {
-      'x-hasura-allowed-roles': ['user', user.role],
+      'x-hasura-allowed-roles': ['user'],
       'x-hasura-default-role': 'user',
       'x-hasura-user-id': user.id.toString(),
       'x-hasura-role': user.role,

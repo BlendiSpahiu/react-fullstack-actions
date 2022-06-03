@@ -11,6 +11,8 @@ export default class PostDbModel extends Model {
   // relationships
   author?: AuthorDbModel;
 
+  static tableName = 'posts';
+
   static get jsonSchema() {
     return {
       type: 'object',

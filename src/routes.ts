@@ -1,12 +1,18 @@
 import { Application, Router } from 'express';
 
 // controllers
-import { PingController, RegisterController } from './controllers/index';
+import {
+  LoginController,
+  PingController,
+  RegisterController,
+  ChangePasswordController,
+} from './controllers/index';
 
 const endpoints: [string, Router][] = [
   ['/ping', PingController],
-  // ['/login', LoginController],
+  ['/login', LoginController],
   ['/register', RegisterController],
+  ['/change-password', ChangePasswordController],
 ];
 
 export const routes = (app: Application): void => {

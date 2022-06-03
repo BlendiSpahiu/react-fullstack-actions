@@ -1,13 +1,7 @@
 import Joi from 'joi';
 
 export const RegisterValidator = Joi.object({
-  fullName: Joi.string().trim().min(3).max(30).required().label('Full name'),
-  companyName: Joi.string()
-    .trim()
-    .min(3)
-    .max(30)
-    .required()
-    .label('Company name'),
+  name: Joi.string().trim().min(3).max(30).required().label('Full name'),
   email: Joi.string()
     .email({
       tlds: {
