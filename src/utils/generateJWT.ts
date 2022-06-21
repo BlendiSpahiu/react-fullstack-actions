@@ -2,6 +2,7 @@ import jwt, { Algorithm } from 'jsonwebtoken';
 
 // configs
 import { JWT_ALGORITHM, JWT_EXPIRES_IN, JWT_SECRET } from '../config/jwt';
+import { UserRoleEnums } from '../interfaces/enums/UserRoleEnums.enum';
 
 // models
 import { UserModel } from '../interfaces/models/index';
